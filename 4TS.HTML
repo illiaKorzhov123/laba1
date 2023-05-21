@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,13 +9,50 @@
 <body>
     <h2>4 Задание</h2>
 
-    <form>
-        <input type="text" placeholder="Имя"> <br>
-        <input type="text" placeholder="Фамилия"> <br>
-        <input type="text" placeholder="Отчество"> <br>
-        <input type="text" placeholder="Группа"> <br>
-        <input type="text" placeholder="Курс"> <br>
-        <button> Отправить</button>
+    <form onsubmit="return validateForm()">
+        <input type="text" placeholder="Имя" id="name"> <br>
+        <input type="text" placeholder="Фамилия" id="surname"> <br>
+        <input type="text" placeholder="Отчество" id="patronymic"> <br>
+        <input type="text" placeholder="Группа" id="group"> <br>
+        <input type="text" placeholder="Курс" id="course"> <br>
+        <button type="submit">Отправить</button>
     </form>
+
+    <script>
+        function validateForm() {
+            var name = document.getElementById("name").value;
+            var surname = document.getElementById("surname").value;
+            var patronymic = document.getElementById("patronymic").value;
+            var group = document.getElementById("group").value;
+            var course = document.getElementById("course").value;
+
+            if (name === "") {
+                alert("Введите имя");
+                return false;
+            }
+
+            if (surname === "") {
+                alert("Введите фамилию");
+                return false;
+            }
+
+            if (patronymic === "") {
+                alert("Введите отчество");
+                return false;
+            }
+
+            if (group === "") {
+                alert("Введите группу");
+                return false;
+            }
+
+            if (course === "") {
+                alert("Введите курс");
+                return false;
+            }
+
+            return true;
+        }
+    </script>
 </body>
 </html>
