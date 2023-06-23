@@ -71,41 +71,4 @@
 
 </body>
 
-<script>
-    function validateForm() {
-        var name = document.getElementById("name").value;
-        var surname = document.getElementById("surname").value;
-        var patronymic = document.getElementById("patronymic").value;
-        var group = document.getElementById("group").value;
-        var course = document.getElementById("course").value;
-
-        if (name === "") {
-            alert("Введите имя");
-            return false;
-        }
-
-        if (surname === "") {
-            alert("Введите фамилию");
-            return false;
-        }
-
-        if (patronymic === "") {
-            alert("Введите отчество");
-            return false;
-        }
-
-        if (group === "") {
-            alert("Введите группу");
-            return false;
-        }
-
-        if (course === "") {
-            alert("Введите курс");
-            return false;
-        }
-
-        return true;
-    }
-</script>
-
 </html>
